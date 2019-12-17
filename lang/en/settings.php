@@ -7,3 +7,4 @@
 
 $lang['url'] = 'Discourse URL';
 $lang['secret'] = 'SSO provider secret';
+$lang['debug'] = 'Show debugging information at login';

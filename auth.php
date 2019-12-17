@@ -52,6 +52,12 @@ class auth_plugin_authdiscourse extends auth_plugin_authplain
             $token = $ssoResponse['nonce'];
             $groups = !empty($ssoResponse['groups']) ? explode(',', $ssoResponse['groups']) : [];
 
+            if ( $this->getConf('debug')) {
+                foreach ($groups as $ssogroup) {
+                    msg("SSO group: " . $ssogroup);
+                }
+	        }
+
             // user with this email exists? try login
             $found = $this->retrieveUsers(0, 1, ['mail' => '^' . str_replace('.', '\.', $mail) . '$']);
             if ($found) {

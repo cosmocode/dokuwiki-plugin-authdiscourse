@@ -78,6 +78,11 @@ class action_plugin_authdiscourse extends DokuWiki_Action_Plugin
 
         $this->setTokenCookie($nonce);
 
+        if ( $this->getConf('debug') ) {
+            msg("AuthDiscourse - SSO Endpoint: " . $endpoint);
+            msg("AuthDiscourse - SSO Request: " . $endpoint . '?' . http_build_query($request));
+        }
+
         send_redirect($endpoint . '?' . http_build_query($request));
     }
 

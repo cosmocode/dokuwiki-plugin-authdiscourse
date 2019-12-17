@@ -7,3 +7,4 @@
 
 $conf['endpoint']       = '';
 $conf['secret']         = '';
+$conf['debug']         = 0;

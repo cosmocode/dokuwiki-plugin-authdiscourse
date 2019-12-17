@@ -7,3 +7,4 @@
 
 $lang['url'] = 'URL des Discourse Servers';
 $lang['secret'] = 'SSO provider secret';
+$lang['debug'] = 'Zeige debugging Informationen bei der Anmeldung';
